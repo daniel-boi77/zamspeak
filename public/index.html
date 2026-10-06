@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07110f">
+  <meta name="description" content="ZamSpeak helps people communicate across English, Bemba, Nyanja, Tonga, and Lozi.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/zamspeak-logo.svg">
+  <title>ZamSpeak™ — Speak your language</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button id="menuBtn" class="icon-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <a class="brand" href="#home" aria-label="ZamSpeak home">
+        <img src="assets/zamspeak-logo.svg" alt="ZamSpeak logo">
+        <span class="brand-copy">
+          <strong>ZamSpeak<span class="tm">™</span></strong>
+          <small>Speak your language. Understand the world.</small>
+        </span>
+      </a>
+      <div class="top-actions">
+        <span class="online-indicator"><i></i><span>Ready</span></span>
+        <button id="themeBtn" class="icon-btn" aria-label="Switch theme">☼</button>
+      </div>
+    </header>
+
+    <aside id="drawer" class="drawer" aria-hidden="true">
+      <div class="drawer-head"><strong>Menu</strong><button id="closeMenu" class="icon-btn" aria-label="Close menu">×</button></div>
+      <div class="drawer-profile">
+        <img src="assets/zamspeak-logo.svg" alt="">
+        <div><strong>ZamSpeak™</strong><span>Language assistant</span></div>
+      </div>
+      <label class="drawer-label">Interface language<select id="uiLanguage"><option>English</option><option>Bemba</option><option>Nyanja</option><option>Tonga</option><option>Lozi</option></select></label>
+      <div class="drawer-nav">
+        <button class="menu-action nav-link" data-view="home"><span>⌂</span>Home</button>
+        <button class="menu-action nav-link" data-view="history"><span>◷</span>History</button>
+        <button class="menu-action nav-link" data-view="phrases"><span>▤</span>Phrases</button>
+        <button class="menu-action nav-link" data-view="favorites"><span>★</span>Favorites</button>
+        <button class="menu-action nav-link" data-view="settings"><span>⚙</span>Settings</button>
+      </div>
+      <hr>
+      <button class="menu-action legal-link" data-page="agreement">App Use Agreement</button>
+      <button class="menu-action legal-link" data-page="privacy">Privacy Policy</button>
+      <button class="menu-action legal-link" data-page="about">About ZamSpeak</button>
+      <a class="drawer-follow" href="https://instagram.com/dan_iel_777" target="_blank" rel="noopener noreferrer">
+        <img src="assets/instagram.svg" alt="Instagram"> <span>Follow @dan_iel_777</span><b>↗</b>
+      </a>
+      <p class="drawer-foot">Developed by Daniel Kalima</p>
+    </aside>
+    <div id="backdrop" class="backdrop"></div>
+
+    <main id="main"></main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="nav-tab active" data-view="home"><span class="nav-icon">⌂</span><span>Home</span></button>
+      <button class="nav-tab" data-view="history"><span class="nav-icon">◷</span><span>History</span></button>
+      <button class="nav-tab" data-view="phrases"><span class="nav-icon">▤</span><span>Phrases</span></button>
+      <button class="nav-tab" data-view="favorites"><span class="nav-icon">★</span><span>Favorites</span></button>
+      <button class="nav-tab" data-view="settings"><span class="nav-icon">⚙</span><span>Settings</span></button>
+    </nav>
+
+    <footer>
+      <div><strong>© 2026 Daniel Kalima</strong><span> · ZamSpeak™</span></div>
+      <a class="instagram-link" href="https://instagram.com/dan_iel_777" target="_blank" rel="noopener noreferrer">
+        <img src="assets/instagram.svg" alt="Instagram"> <span>Follow @dan_iel_777</span><b>↗</b>
+      </a>
+    </footer>
+  </div>
+
+  <dialog id="legalDialog">
+    <button id="closeDialog" class="dialog-close" aria-label="Close">×</button>
+    <div id="legalContent"></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
